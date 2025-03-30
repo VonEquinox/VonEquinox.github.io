@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的文章列表</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif; /* 设置字体 */
+            line-height: 1.6;         /* 设置行高，让阅读更舒适 */
+            margin: 20px;             /* 页面外边距 */
+            background-color: #f4f4f4; /* 页面背景色 */
+        }
+        .container {
+            max-width: 800px;        /* 内容最大宽度 */
+            margin: 0 auto;          /* 居中显示 */
+            background-color: #fff;  /* 内容区域背景色 */
+            padding: 20px;           /* 内容区域内边距 */
+            border-radius: 8px;      /* 内容区域圆角 */
+            box-shadow: 0 0 10px rgba(0,0,0,0.1); /* 添加一点阴影 */
+        }
+        .article {
+            border-bottom: 1px solid #eee; /* 文章之间的分隔线 */
+            padding-bottom: 20px;       /* 分隔线与下方内容的距离 */
+            margin-bottom: 20px;        /* 文章之间的垂直距离 */
+        }
+        .article:last-child {
+            border-bottom: none;        /* 最后一篇文章不需要分隔线 */
+            margin-bottom: 0;
+        }
+        .article h2 { /* 文章标题样式 */
+            color: #333;
+            margin-top: 0; /* 移除标题默认的上边距 */
+        }
+        .article p { /* 文章内容段落样式 */
+            color: #555;
+        }
+        h1 { /* 页面主标题样式 */
+           text-align: center;
+           color: #2a2a2a;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>文章精选</h1>
+
+        <div class="article">
+            <h2>文章标题一：介绍 HTML 基础</h2>
+            <p>
+                这是第一篇文章的内容部分。HTML (HyperText Markup Language) 是构建网页内容的基础。它使用标签来定义不同的元素，例如标题、段落、图片和链接。
+            </p>
+            <p>
+                学习 HTML 是网页开发的第一步。理解标签的语义和结构非常重要。
+            </p>
+            </div>
+
+        <div class="article">
+            <h2>文章标题二：CSS 简介</h2>
+            <p>
+                这是第二篇文章的内容。CSS (Cascading Style Sheets) 用于描述 HTML 元素在屏幕上应该如何呈现。它可以控制布局、颜色、字体等视觉表现。
+            </p>
+            <p>
+                通过将 CSS 应用于 HTML，我们可以创建出美观且具有吸引力的网页。
+            </p>
+        </div>
+
+        <div class="article">
+            <h2>文章标题三：关于 GitHub Pages</h2>
+            <p>
+                这是第三篇文章的内容。GitHub Pages 是 GitHub 提供的一项服务，允许你直接从 GitHub 仓库托管静态网站。
+            </p>
+            <p>
+                你可以用它来托管个人博客、项目文档或作品集页面，非常方便且免费。就像你现在看到的这个页面结构，就可以通过 GitHub Pages 发布。
+            </p>
+        </div>
+
+        </div> </body>
+</html>
