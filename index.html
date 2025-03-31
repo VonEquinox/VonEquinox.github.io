@@ -29,15 +29,22 @@
             margin-bottom: 0;
         }
         .article h2 { /* 文章标题样式 */
-            color: #333;
+            /* --- 修改：将标题颜色设置为红色 --- */
+            color: red;
             margin-top: 0; /* 移除标题默认的上边距 */
         }
         .article p { /* 文章内容段落样式 */
-            color: #555;
+            /* --- 修改：将段落颜色设置为纯黑色 --- */
+            color: #000000;
         }
         h1 { /* 页面主标题样式 */
            text-align: center;
            color: #2a2a2a;
+        }
+        /* --- 新增/修改：让 strong 标签（加粗）更粗 --- */
+        strong {
+            /* 使用更高的 font-weight 值。注意：效果取决于字体本身是否支持更粗的字重 */
+            font-weight: 900; /* 900 是常见的非常粗的字重 */
         }
     </style>
 </head>
