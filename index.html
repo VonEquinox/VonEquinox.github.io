@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yu Ao Zhang - Shanghai University of Electric Power</title>
+    <meta name="description" content="Yu Ao Zhang's academic homepage. Undergraduate at Shanghai University of Electric Power. Research interests: AI, Machine Learning, NLP, Computer Vision.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg: #fafaf9;
+            --bg-card: #ffffff;
+            --text: #1c1917;
+            --text-secondary: #57534e;
+            --accent: #2563eb;
+            --accent-light: #eff6ff;
+            --border: #e7e5e4;
+            --tag-bg: #f5f5f4;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 60px 24px 80px;
+        }
+
+        /* Header / Profile */
+        .profile {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+            margin-bottom: 56px;
+        }
+
+        .avatar {
+            width: 160px;
+            height: 160px;
+            border-radius: 16px;
+            object-fit: cover;
+            flex-shrink: 0;
+            background: linear-gradient(135deg, #dbeafe, #c7d2fe);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 56px;
+            color: var(--accent);
+            font-weight: 600;
+            font-family: 'Crimson Pro', serif;
+        }
+
+        .profile-info h1 {
+            font-size: 32px;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+            margin-bottom: 4px;
+        }
+
+        .profile-info .subtitle {
+            font-size: 16px;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+
+        .profile-info .bio {
+            font-size: 15px;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 14px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            padding: 6px 14px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            background: var(--bg-card);
+            transition: all 0.2s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--accent);
+            border-color: var(--accent);
+            background: var(--accent-light);
+        }
+
+        /* Sections */
+        .section {
+            margin-bottom: 48px;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border);
+            letter-spacing: -0.3px;
+        }
+
+        /* Research Interests */
+        .interests {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .interest-tag {
+            padding: 8px 18px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            font-size: 14px;
+            color: var(--text);
+            font-weight: 450;
+            transition: all 0.2s ease;
+        }
+
+        .interest-tag:hover {
+            border-color: var(--accent);
+            background: var(--accent-light);
+            color: var(--accent);
+        }
+
+        /* Education */
+        .edu-item {
+            display: flex;
+            gap: 16px;
+            padding: 20px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            margin-bottom: 12px;
+        }
+
+        .edu-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            background: var(--accent-light);
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .edu-content h3 {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .edu-content p {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        /* Publications placeholder */
+        .pub-placeholder {
+            padding: 32px;
+            background: var(--bg-card);
+            border: 1px dashed var(--border);
+            border-radius: 12px;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid var(--border);
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            .profile {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 24px;
+            }
+            .social-links { justify-content: center; }
+            .container { padding: 40px 16px 60px; }
+            .profile-info h1 { font-size: 26px; }
+            .avatar { width: 120px; height: 120px; font-size: 42px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Profile Header -->
+        <header class="profile">
+            <div class="avatar">Y</div>
+            <div class="profile-info">
+                <h1>Yu Ao Zhang</h1>
+                <p class="subtitle">Undergraduate Student · Shanghai University of Electric Power</p>
+                <p class="bio">
+                    I am an undergraduate student at Shanghai University of Electric Power.
+                    My research interests lie in Artificial Intelligence, Machine Learning,
+                    Natural Language Processing, and Computer Vision. I am passionate about
+                    exploring how intelligent systems can understand and interact with the world.
+                </p>
+                <div class="social-links">
+                    <a href="mailto:VonEquinox@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+                    <a href="https://github.com/VonEquinox" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="https://scholar.google.com/" target="_blank"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Research Interests -->
+        <section class="section">
+            <h2 class="section-title">Research Interests</h2>
+            <div class="interests">
+                <span class="interest-tag">Artificial Intelligence</span>
+                <span class="interest-tag">Machine Learning</span>
+                <span class="interest-tag">Deep Learning</span>
+                <span class="interest-tag">Natural Language Processing</span>
+                <span class="interest-tag">Computer Vision</span>
+                <span class="interest-tag">Large Language Models</span>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section class="section">
+            <h2 class="section-title">Education</h2>
+            <div class="edu-item">
+                <div class="edu-icon"><i class="fas fa-university"></i></div>
+                <div class="edu-content">
+                    <h3>Shanghai University of Electric Power</h3>
+                    <p>B.S. Undergraduate Student</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications -->
+        <section class="section">
+            <h2 class="section-title">Publications</h2>
+            <div class="pub-placeholder">
+                <i class="fas fa-flask" style="font-size: 24px; margin-bottom: 12px; display: block; color: var(--accent);"></i>
+                Papers in preparation. Stay tuned!
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2026 Yu Ao Zhang. Last updated: February 2026.</p>
+        </footer>
+    </div>
+</body>
+</html>
